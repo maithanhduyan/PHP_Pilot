@@ -1,6 +1,6 @@
 <?php
 
-	include("template.class.php");
+	include("/lib/template_engine/template.class.php");
 	
 	/**
 	 * Creates a new template for the user's profile.
