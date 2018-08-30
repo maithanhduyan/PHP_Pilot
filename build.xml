@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="php_pilot" default="" basedir=".">
+	<property environment="env" />
+
+	<target name="clean" description="Clean up and create artifact directories">
+
+	</target>
+
+	<target name="Create Project Structure" description="Create Structure Directories of Project">
+		<mkdir dir="${basedir}/doc" />
+		<mkdir dir="${basedir}/example" />
+		<mkdir dir="${basedir}/js" />
+		<mkdir dir="${basedir}/libraries" />
+		<mkdir dir="${basedir}/po" />
+		<mkdir dir="${basedir}/scripts" />
+		<mkdir dir="${basedir}/setup" />
+		<mkdir dir="${basedir}/sql" />
+		<mkdir dir="${basedir}/templates" />
+		<mkdir dir="${basedir}/test" />
+		<mkdir dir="${basedir}/themes" />
+	</target>
+
+</project>
