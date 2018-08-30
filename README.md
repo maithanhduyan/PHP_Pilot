@@ -7,3 +7,54 @@ This library for PHP Team
 
 2. Array Handling technical in PHP 
 	- sort array.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+Project folder structure
+
+php_pilot [Project name]
+	|
+	-->doc
+	|
+	-->js
+	|
+	-->libraries
+	|		|
+	|		-->certs
+	|		|
+	|		-->classes
+	|
+	-->po
+	|
+	-->sripts
+	|
+	-->setup
+	|
+	-->sql
+	|
+	-->templates
+	|
+	-->test
+	|
+	-->themes	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
