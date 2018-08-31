@@ -7,7 +7,7 @@
 
 	</target>
 
-	<target name="Create Project Structure" description="Create Structure Directories of Project">
+	<target name="Create Project Structure" description="Create Structure Directories of Project like PhpMyAdmin">
 		<mkdir dir="${basedir}/doc" />
 		<mkdir dir="${basedir}/example" />
 		<mkdir dir="${basedir}/js" />
@@ -21,4 +21,10 @@
 		<mkdir dir="${basedir}/themes" />
 	</target>
 
+	<target name="ant environment" description="">
+		<echo>${ant.version}</echo>
+		<echo>${ant.java.version}</echo>
+		<echo>OS name: ${os.name}</echo>
+		<echo>OS version: ${os.version}</echo>
+	</target>
 </project>
