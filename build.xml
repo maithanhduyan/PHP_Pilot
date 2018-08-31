@@ -27,4 +27,36 @@
 		<echo>OS name: ${os.name}</echo>
 		<echo>OS version: ${os.version}</echo>
 	</target>
+
+	<target name="php version">
+		<exec executable="php">
+			<arg line="-version" />
+		</exec>
+	</target>
+	<target name="node version">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="-v" />
+		</exec>
+	</target>
+	<target name="install gsap">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="install gsap" />
+		</exec>
+	</target>
+	<target name="install bootstrap">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="install bootstrap" />
+		</exec>
+	</target>
+	<target name="install jquery">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="install jquery" />
+		</exec>
+	</target>
+	<target name="smarty">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line='composer -v' />
+		</exec>
+	</target>
+
 </project>
