@@ -58,6 +58,11 @@
 			<arg line="install jquery" />
 		</exec>
 	</target>
+	<target name="install angular">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="install angular" />
+		</exec>
+	</target>
 	<target name="composer version">
 		<exec executable="C:\composer\composer.bat">
 			<arg line="-V" />
