@@ -3,7 +3,7 @@
 <project name="php_pilot" default="" basedir=".">
 	<property environment="env" />
 
-	<target name="clean" description="Clean up and create artifact directories">
+	<target name="clean all" description="Clean up and create artifact directories" depends="clean-vendo,clean-node-modules">
 
 	</target>
 
@@ -21,61 +21,75 @@
 		<mkdir dir="${basedir}/themes" />
 	</target>
 
-	<target name="ant environment" description="">
+	<target name="ant-environment" description="">
 		<echo>${ant.version}</echo>
 		<echo>${ant.java.version}</echo>
 		<echo>OS name: ${os.name}</echo>
 		<echo>OS version: ${os.version}</echo>
 	</target>
 
-	<target name="php version">
+	<target name="clean-vendor" description="Clean up and create artifact directories">
+		<delete dir="${basedir}/vendor" />
+	</target>
+
+	<target name="clean-node-modules" description="Clean up node_modules">
+		<delete dir="${basedir}/node_modules" />
+	</target>
+
+	<target name="php-version">
 		<exec executable="php">
 			<arg line="-version" />
 		</exec>
 	</target>
-	<target name="node version">
+	<target name="node-version">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="-v" />
 		</exec>
 	</target>
-	<target name="node modules update">
+	<target name="node-modules-update">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
-			<arg line="update" />
+			<arg line="i -g npm-check-updates" />
 		</exec>
 	</target>
-	<target name="install gsap">
+	<target name="install-gsap">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="install gsap" />
 		</exec>
 	</target>
-	<target name="install bootstrap">
+	<target name="install-bootstrap">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="install bootstrap" />
 		</exec>
 	</target>
-	<target name="install jquery">
+	<target name="install-jquery">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="install jquery" />
 		</exec>
 	</target>
-	<target name="install angular">
+	<target name="install-angular">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="install angular" />
 		</exec>
 	</target>
-	<target name="composer version">
+	<target name="composer-version">
 		<exec executable="C:\composer\composer.bat">
 			<arg line="-V" />
 		</exec>
 	</target>
-	<target name="composer smarty">
+	<target name="composer-smarty">
 		<exec executable="C:\composer\composer.bat">
 			<arg line='require "smarty/smarty:~3.1"' />
 		</exec>
 	</target>
-	<target name="composer twig">
+	<target name="composer-twig">
 		<exec executable="C:\composer\composer.bat">
 			<arg line='require "twig/twig:^2.0"' />
+		</exec>
+	</target>
+
+	<target name="composer-update">
+		<exec executable="C:\composer\composer.bat">
+			<arg line="update" />
 		</exec>
 	</target>
 
