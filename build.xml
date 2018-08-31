@@ -38,6 +38,11 @@
 			<arg line="-v" />
 		</exec>
 	</target>
+	<target name="node modules update">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="update" />
+		</exec>
+	</target>
 	<target name="install gsap">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="install gsap" />
