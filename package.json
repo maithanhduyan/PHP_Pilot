@@ -1,0 +1,11 @@
+{
+	"name": "php_pilot",
+	"version": "0.1",
+	"description": "PHP Pilot",
+	"repository": "",
+	"dependencies": {
+		
+	},
+	"devDependencies": {},
+	"author": "Mai Th�nh Duy An"
+}
