@@ -2,10 +2,16 @@
 	"name": "php_pilot",
 	"version": "0.1",
 	"description": "PHP Pilot",
-	"repository": "",
-	"dependencies": {
-		
+	"repository": "https://github.com/maithanhduyan/PHP_Pilot.git",
+	"dependencies": 
+	{
+		"jshint": "^2.9.6"
 	},
-	"devDependencies": {},
+
+	"devDependencies": 
+	{
+		"eslint": "^4.9.0"
+	},
+
 	"author": "Mai Th�nh Duy An"
 }

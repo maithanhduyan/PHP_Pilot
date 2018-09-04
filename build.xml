@@ -4,7 +4,17 @@
 	<property environment="env" />
 
 	<target name="clean all" description="Clean up and create artifact directories" depends="clean-vendor,clean-node-modules">
+		<delete dir="${basedir}/build/api" />
+		<delete dir="${basedir}/build/code-browser" />
+		<delete dir="${basedir}/build/coverage" />
+		<delete dir="${basedir}/build/logs" />
+		<delete dir="${basedir}/build/pdepend" />
 
+		<mkdir dir="${basedir}/build/api" />
+		<mkdir dir="${basedir}/build/code-browser" />
+		<mkdir dir="${basedir}/build/coverage" />
+		<mkdir dir="${basedir}/build/logs" />
+		<mkdir dir="${basedir}/build/pdepend" />
 	</target>
 
 	<target name="Create Project Structure" description="Create Structure Directories of Project like PhpMyAdmin">
@@ -48,12 +58,17 @@
 	</target>
 	<target name="node-modules-update">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
-			<arg line="i -g npm-check-updates" />
+			<arg line="update" />
 		</exec>
 	</target>
 	<target name="install-gsap">
 		<exec executable="C:\Program Files\nodejs\npm.cmd">
 			<arg line="install gsap" />
+		</exec>
+	</target>
+	<target name="install-jshint">
+		<exec executable="C:\Program Files\nodejs\npm.cmd">
+			<arg line="install -g jshint" />
 		</exec>
 	</target>
 	<target name="install-bootstrap">
